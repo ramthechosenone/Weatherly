@@ -1,0 +1,149 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="32dp"
+    android:paddingRight="32dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity"
+    android:id="@+id/screenBackground"
+    android:background="#FF009DBD">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/temperatureLabel"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:text="--"
+        android:textSize="150sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/degreeImageView"
+        android:src="@drawable/degree"
+        android:layout_alignTop="@+id/temperatureLabel"
+        android:layout_toRightOf="@+id/temperatureLabel"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The temperature is,"
+        android:id="@+id/timeLabel"
+        android:layout_above="@+id/temperatureLabel"
+        android:layout_centerHorizontal="true"
+        android:textColor="#80ffffff"
+        android:textSize="18sp"
+        android:textIsSelectable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arlington, Texas"
+        android:id="@+id/Location_label"
+        android:layout_above="@+id/timeLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:textColor="#ffffffff"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/icon_imageview"
+        android:layout_alignBottom="@+id/Location_label"
+        android:layout_alignParentLeft="true"
+
+        android:src="@drawable/cloudy_night" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temperatureLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Humidity"
+                android:id="@+id/Humidity_Label"
+                android:textColor="#80ffffff"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:id="@+id/humidity_Value_label"
+                android:textColor="#ffffffff"
+                android:textSize="24sp"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rain/Snow"
+                android:id="@+id/precip_label"
+                android:textColor="#80ffffff"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:id="@+id/Precip_value"
+                android:textColor="#ffffffff"
+                android:textSize="24sp"
+                android:gravity="center_horizontal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hold your horses !"
+        android:id="@+id/summary_text"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:textColor="#ffffffff"
+        android:textSize="18dp"
+        android:gravity="center_horizontal"
+        android:singleLine="false" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/refresh_imageview"
+        android:layout_above="@+id/icon_imageview"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/refresh"
+        android:layout_marginBottom="10dp" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/refresh_progressBar"
+        android:layout_alignBottom="@+id/refresh_imageview"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
